@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Test FrontEnd Grability</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+</head>
+<body>
+
+<!--Carga de la app mediante ui-router (Angular)-->
+<div ui-view=""></div>
+<!-- *************************** Librerias ************************** -->
+<script src="lib/vendor/jquery/dist/jquery.min.js"></script>
+<script src="lib/vendor/angular/angular.min.js"></script>
+<script src="lib/vendor/angular-route/angular-route.min.js"></script>
+<script src="lib/vendor/angular-animate/angular-animate.min.js"></script>
+<script src="lib/vendor/angular-cookies/angular-cookies.min.js"></script>
+<script src="lib/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="lib/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="lib/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="lib/vendor/angular-lazy-img/release/angular-lazy-img.js"></script>
+
+<!-- ***************** Angular Configuracion y Utilidades ****************** -->
+<script src="route.js"></script>
+<script src="config/config.js"></script>
+<script src="utilities/filters.js"></script>
+<script src="utilities/requestInterceptor.js"></script>
+
+
+<!-- ************************* Controladores ************************* -->
+<script src="modules/feed/controllers/feedCtrl.js"></script>
+
+<!-- *************************** Modelos **************************** -->
+<script src="modules/feed/models/feedMdl.js"></script>
+</body>
+</html>

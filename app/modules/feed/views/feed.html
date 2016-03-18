@@ -1,0 +1,70 @@
+<div id="principal">
+    <div class="contenedor" style="transform: translate(0px, 50px);">
+        <div class="cabecera">
+            <header>
+                <nav class="centro-elemento">
+                    <ul class="feed-button" ng-click="getFeed();$('#config').toggle('slide');"
+                        onclick="$('#seccion').toggle('slide');">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <h2>
+                        <p class="{{class_title}}">
+                            {{top_title | format_title:true}}
+                        </p>
+                    </h2>
+
+                    <i onclick="$('#config').toggle('slide');" class="fa fa-wrench"></i>
+                </nav>
+            </header>
+        </div>
+        <div id="config" style="display: none" class="configuracion ">
+            &nbsp; &nbsp;Api Url: <input placeholder="Default:{{url_api_default}}" style="width: 80%" type="text"
+                                         ng-model="url_api_config">
+        </div>
+        <div class="centro-elemento feed">
+            <div id="seccion" style="display: {{display}}">
+                <section ng-repeat="feed in data" class="seccion"
+                         style="width: 100%; animation-delay:.{{$index}}s;">
+                    <div ng-click="displayInfoFeed($index,feed.title);" class="seccion-button">
+                        <figure>
+                            <img src='./images/spinner.gif' lazy-img="{{feed.image}}"/>
+                        </figure>
+                        &nbsp;&nbsp;
+                        <h4>{{feed.title | format_title:true}}</h4>
+                    </div>
+                    <article ng-class="{'mostrar': $index==selectedIndex}">
+                        <figure>
+                            <img src="{{feed.image}}"/>
+                        </figure>
+                        <aside><h4>{{feed.title | format_title:false}}</h4>
+
+                            <p>{{feed.content}}</p></aside>
+                    </article>
+                </section>
+                <br/>
+            </div>
+            <div ng-if="data.length==0" class="mensaje">
+                <p>
+                    Pulsa el botón
+                    <b>superior izquierdo</b>
+                    para cargar noticias o el
+                    <b>boton superior derecho</b>
+                    para cambiar URL del feed.
+                    <br/><br/>
+                    <b>Autor:</b>{{detail_app.appAuthor}}<br/>
+                    <b>Aplicacion:</b>{{detail_app.appName}}<br/>
+                    <b>Email:</b>{{detail_app.appAuthorEmail}}<br/>
+                    <b>Descripcion:</b>{{detail_app.appDescription}}<br/>
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="loading">
+        <div class="alert alert-info">
+            <span class="fa fa-refresh fa-refresh-animate"></span> Cargando...
+        </div>
+    </div>
+</div>
