@@ -7,7 +7,7 @@ Prueba de frontEnd para www.grability.com, dentro del repositorio encontraras lo
 **app:** Este directorio contiene la aplicacion angular que se va a mostrar de cara al cliente.
 Una vez instalado y configurado correctamente al entrar**(localhost(o de acuerdo al server ejecutado)/nombre_repo/app/)** podra ver el feed de noticias funcional.
 
-**DEMO:**test.fbustamante.com.ve
+**DEMO:** http://test.fbustamante.com.ve/
 
 ### Requerimientos ###
 _______________________
